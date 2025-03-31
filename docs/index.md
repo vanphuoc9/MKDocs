@@ -1,7 +1,7 @@
 # Chào mừng
 ## Giới thiệu
 
-Chào mừng bạn đến với kho tài liệu chia sẻ kiến thức lập trình của mình!
+Chào mừng bạn đến với kho tài liệu chia sẻ kiến thức lập trình!
 
 Tại đây, mình sẽ chia sẽ kiến thức góp nhặt trong lĩnh vực phát triển phần mềm:
 
