@@ -3,6 +3,7 @@ site_url: https://example.com
 repo_url: https://github.com/vanphuoc9/MKDocs
 edit_uri: edit/main/docs/
 theme:
+  language: vi
   name: material
   palette:
     # Light Mode
@@ -53,5 +54,13 @@ plugins:
   - search
   - blog:
       archive_date_format: MMMM yyyy
+# extra:
+#   alternate:
+#     - name: English
+#       link: /en/ 
+#       lang: en
+#     - name: Tiếng Việt
+#       link: /vi/
+#       lang: vi
     
 

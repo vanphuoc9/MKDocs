@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.com/</loc>
+         <loc>https://example.com/en/</loc>
          <lastmod>2025-03-31</lastmod>
     </url>
     <url>
-         <loc>https://example.com/code-examples/</loc>
+         <loc>https://example.com/en/C%C3%A0i%20%C4%91%E1%BA%B7t%20K8S%20tr%C3%AAn%20Ubuntu/admonition/</loc>
          <lastmod>2025-03-31</lastmod>
     </url>
     <url>
-         <loc>https://example.com/content-tabs/</loc>
+         <loc>https://example.com/en/blog/</loc>
          <lastmod>2025-03-31</lastmod>
     </url>
     <url>
-         <loc>https://example.com/K8S/C%C3%A0i%20%C4%91%E1%BA%B7t%20K8S%20tr%C3%AAn%20Ubuntu/admonition/</loc>
+         <loc>https://example.com/en/blog/posts/draft/</loc>
          <lastmod>2025-03-31</lastmod>
     </url>
     <url>
-         <loc>https://example.com/blog/posts/draft/</loc>
+         <loc>https://example.com/en/blog/posts/draft1/</loc>
          <lastmod>2025-03-31</lastmod>
     </url>
     <url>
-         <loc>https://example.com/blog/posts/myfirst/</loc>
+         <loc>https://example.com/vi/</loc>
+         <lastmod>2025-03-31</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/vi/C%C3%A0i%20%C4%91%E1%BA%B7t%20K8S%20tr%C3%AAn%20Ubuntu/admonition/</loc>
+         <lastmod>2025-03-31</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/vi/blog/</loc>
+         <lastmod>2025-03-31</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/vi/blog/posts/draft/</loc>
+         <lastmod>2025-03-31</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/vi/blog/posts/draft1/</loc>
+         <lastmod>2025-03-31</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/blog/</loc>
          <lastmod>2025-03-31</lastmod>
     </url>
 </urlset>
