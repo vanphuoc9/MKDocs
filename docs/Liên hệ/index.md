@@ -8,6 +8,7 @@ Mình cung cấp các giải pháp bao gồm:
 
 📧 **Email:** [thaiphuoc1997@gmail.com](thaiphuoc1997@gmail.com)  
 📱 **Telegram:** [@tvphuoctgg](https://t.me/tvphuoctgg)  
-📞 **Zalo:** [0886979802](https://zalo.me/0886979802) 
+📞 **Zalo/SĐT:** [0886979802](https://zalo.me/0886979802) 
+
 
 Chúng tôi luôn sẵn sàng hỗ trợ và đồng hành cùng bạn trong mọi dự án! 🚀
