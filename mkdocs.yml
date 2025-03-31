@@ -5,6 +5,13 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   palette:
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: indigo
+      accent: deep orange
     # Dark Mode
     - scheme: slate
       toggle:
@@ -13,14 +20,9 @@ theme:
       primary: green
       accent: deep purple
 
-    # Light Mode
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Light mode
-      primary: blue
-      accent: deep orange
+    
   features:
+    - navigation.tabs
     - navigation.footer
     - navigation.expand
     - navigation.instant
@@ -28,10 +30,6 @@ theme:
     - navigation.top
     - navigation.tracking
     - navigation.search.highlight
-    - navigation.search.suggest
-    - navigation.search.share
-    - navigation.search.suggest
-    - navigation.search.share
     - navigation.search.suggest
     - navigation.search.share
     - navigation.indexes

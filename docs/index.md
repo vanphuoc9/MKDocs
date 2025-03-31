@@ -1,4 +1,4 @@
-# Chào mừng
+# Trang chủ
 ## Giới thiệu
 
 Chào mừng bạn đến với kho tài liệu chia sẻ kiến thức lập trình!
