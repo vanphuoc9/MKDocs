@@ -3,6 +3,9 @@ site_url: https://example.com
 repo_url: https://github.com/vanphuoc9/MKDocs
 edit_uri: edit/main/docs/
 theme:
+  icon:
+    edit: material/pencil 
+    view: material/eye
   language: vi
   name: material
   palette:
@@ -18,7 +21,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Dark mode
-      primary: green
+      primary: indigo
       accent: deep purple
 
     
@@ -54,7 +57,15 @@ plugins:
   - search
   - blog:
       archive_date_format: MMMM yyyy
-# extra:
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/vanphuoc9
+    - icon: fontawesome/brands/telegram
+      link:  https://t.me/tvphuoctgg  
 #   alternate:
 #     - name: English
 #       link: /en/ 
