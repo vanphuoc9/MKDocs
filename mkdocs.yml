@@ -1,5 +1,7 @@
 site_name: Tài liệu & Kiến thức lập trình
 site_url: https://example.com
+repo_url: https://github.com/vanphuoc9/MKDocs
+edit_uri: edit/main/docs/
 theme:
   name: material
   palette:
@@ -32,6 +34,10 @@ theme:
     - navigation.search.share
     - navigation.search.suggest
     - navigation.search.share
+    - navigation.indexes
+    - content.code.copy
+    - content.action.view
+    - content.action.edit
 markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
@@ -45,8 +51,9 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 copyright: Copyright &copy; 2025 Thái Văn Phước
-
 plugins:
   - search
-  - blog
+  - blog:
+      archive_date_format: MMMM yyyy
+    
 
