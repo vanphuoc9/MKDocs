@@ -44,4 +44,9 @@ markdown_extensions:
   - pymdownx.snippets
   - admonition
   - pymdownx.details
+copyright: Copyright &copy; 2025 Thái Văn Phước
+
+plugins:
+  - search
+  - blog
 
