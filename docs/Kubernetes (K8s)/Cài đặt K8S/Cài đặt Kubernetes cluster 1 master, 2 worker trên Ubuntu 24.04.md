@@ -333,4 +333,4 @@ worker2.xtl   Ready    <none>          19m   v1.30.5
 ### Tài liệu tham khảo
 
 - [Cài đặt Kubernetes cluster trên Ubuntu server 22.04](https://nvtienanh.info/blog/cai-dat-kubernetes-cluster-tren-ubuntu-server-22-04)
--  [Installing kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+- [Installing kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
