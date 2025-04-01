@@ -6,7 +6,7 @@ Mình cung cấp các giải pháp bao gồm:
 
 ## 📩 Liên hệ ngay để hợp tác  
 
-📧 **Email:** [thaiphuoc1997@gmail.com](thaiphuoc1997@gmail.com)  
+📧 **Email:** [thaiphuoc1997@gmail.com](mailto:thaiphuoc1997@gmail.com)  
 📱 **Telegram:** [@tvphuoctgg](https://t.me/tvphuoctgg)  
 📞 **Zalo/SĐT:** [0886979802](https://zalo.me/0886979802) 
 
