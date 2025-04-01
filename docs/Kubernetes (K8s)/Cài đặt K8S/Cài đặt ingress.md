@@ -38,19 +38,6 @@ ingress-nginx-controller-admission   ClusterIP      10.107.107.210   <none>     
 
 ```
 
-Chúng ta có thể thấy 2 port 80/443 trên Nginx được map tương ứng sang port 32000/32748, như vậy nếu muốn access vào App1 trên K8s thông qua Ingress Nginx thì cần truy cập như sau:
-
-- **HTTP: http://app1.example.com:32000**
-- **HTTPS: https://app1.example.com:32748**
-
-Như vậy khá là bất tiện, chúng ta có thể:
-
-- **Dùng chức năng port-forward trên router để mapping tiếp port 80->32000 và 443->32748. Về cơ bản đường đi của nó như sau: Internet (80/http) –>router (port-forward) –> Kuberentes IP (32000/http) –> Nginx (80/http)**
-
-- **Dùng 1 Proxy như Haproxy hoặc Nginx đứng trước K8s cluster để điều phối**
-
-Để tránh những phức tạp khi triển khai Ingress Nginx trên Bare metal K8s cluster, dưới đây mình sẽ giới thiệu cách triển khai Metallb và Ingress Nginx (Load Balancer)
-
 Tài liệu tham khảo:
 
 - [Cài đặt Metallb và Ingress Nginx trên Bare metal Kubernetes cluster của anh nvtienanh](https://nvtienanh.info/blog/cai-dat-metallb-va-ingress-nginx-tren-bare-metal-kubernetes-cluster)
