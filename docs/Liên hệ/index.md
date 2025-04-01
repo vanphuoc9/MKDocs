@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+  - navigation
+---
 # 🚀 Hợp tác & Thực hiện Dự án  
 
 Mình cung cấp các giải pháp bao gồm:  

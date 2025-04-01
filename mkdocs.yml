@@ -2,6 +2,16 @@ site_name: Tài liệu & Kiến thức lập trình
 site_url: https://example.com
 repo_url: https://github.com/vanphuoc9/MKDocs
 edit_uri: edit/main/docs/
+nav:
+  - Trang chủ: index.md
+  - Kubernetes (K8s):
+      # - Cài đặt ubuntu: Kubernetes (K8s)/Cài đặt ubuntu/Cài đặt ubuntu.md
+      - Cài đặt Kubernetes cluster 1 master, 2 worker trên Ubuntu 24.04: Kubernetes (K8s)/Cài đặt K8S/Cài đặt Kubernetes cluster 1 master, 2 worker trên Ubuntu 24.04.md
+      - Cài đặt ingress: Kubernetes (K8s)/Cài đặt K8S/Cài đặt ingress.md
+  - Liên hệ: Liên hệ/index.md
+  - Blog: 
+      - blog/index.md
+
 theme:
   icon:
     edit: material/pencil 
