@@ -5,9 +5,9 @@ edit_uri: edit/main/docs/
 nav:
   - Trang chủ: index.md
   - Kubernetes (K8s):
-      # - Cài đặt ubuntu: Kubernetes (K8s)/Cài đặt ubuntu/Cài đặt ubuntu.md
       - Cài đặt Kubernetes cluster 1 master, 2 worker trên Ubuntu 24.04: Kubernetes (K8s)/Cài đặt K8S/Cài đặt Kubernetes cluster 1 master, 2 worker trên Ubuntu 24.04.md
-      - Cài đặt ingress: Kubernetes (K8s)/Cài đặt K8S/Cài đặt ingress.md
+      - Cài đặt NFS server: Kubernetes (K8s)/Cài đặt K8S/Cài đặt nfs.md
+      - Cài đặt Ingress Nginx: Kubernetes (K8s)/Cài đặt K8S/Cài đặt ingress.md
       - Cài đặt Metallb + Ingress Nginx: Kubernetes (K8s)/Cài đặt K8S/Cài đặt Metallb.md
   - Liên hệ: Liên hệ/index.md
   - Blog: 
