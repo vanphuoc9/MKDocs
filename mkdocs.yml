@@ -61,6 +61,23 @@ plugins:
       type: date
       enable_creation_date: true
 extra:
+  analytics:
+    provider: google
+    property: G-D8WJRZCBNB
+    feedback:
+      title: Bài viết có hữu ích cho bạn không?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: Có hữu ích
+          data: 1
+          note: >-
+            Cảm ơn bạn đã phản hồi!
+        - icon: material/emoticon-sad-outline
+          name: Không hữu ích
+          data: 0
+          note: >- 
+            Cảm ơn đã phản hồi! Hãy giúp chúng tôi cải thiện trang này bằng cách điền vào mẫu
+             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxXARl33b7ul3h0onQ2PeUG_1ouXuZnlTUOhRURmAD8MUh0Q/viewform?usp=dialog" target="_blank" rel="noopener">Mãu phản hồi</a>.
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/vanphuoc9
