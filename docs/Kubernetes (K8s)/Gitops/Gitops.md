@@ -1,7 +1,7 @@
 # GitOps: Jenkins + Argocd + Github + Docker hub
 
 ## 1. Giới thiệu
-GitOps là phương pháp triển khai và quản lý ứng dụng trên Kubernetes bằng cách sử dụng Git làm nguồn duy nhất cho cấu hình và trạng thái ứng dụng.
+GitOps là một phương pháp triển khai và quản lý hạ tầng, ứng dụng dựa trên Git. Nó sử dụng các công cụ CI/CD để tự động hóa việc triển khai và đồng bộ hệ thống với trạng thái mong muốn được lưu trữ trong Git repository
 
 ## 2. Chức năng các công cụ trong GitOps
 
@@ -11,11 +11,11 @@ GitOps là phương pháp triển khai và quản lý ứng dụng trên Kuberne
 
 ### 2.2. Jenkins
 - **Chức năng**: Tự động hóa quy trình build và deploy.
-- **Vai trò**: Jenkins xây dựng ứng dụng, tạo hình ảnh Docker và đẩy lên Docker Hub.
+- **Vai trò**: Jenkins xây dựng ứng dụng, tạo Image Docker và đẩy lên Docker Hub.
 
 ### 2.3. Docker Hub
-- **Chức năng**: Lưu trữ hình ảnh Docker.
-- **Vai trò**: Docker Hub là nơi lưu trữ hình ảnh Docker sẵn sàng để triển khai.
+- **Chức năng**: Lưu trữ Image Docker.
+- **Vai trò**: Docker Hub là nơi lưu trữ Image Docker sẵn sàng để triển khai.
 
 ### 2.3. ArgoCD
 - **Chức năng**: Triển khai và quản lý ứng dụng trên Kubernetes.
