@@ -1,9 +1,27 @@
 # Cài đặt Argocd
 
-## 1. Giới thiệu
-[ArgoCD](https://argo-cd.readthedocs.io/en/stable/) là một công cụ dễ sử dụng cho phép các nhóm phát triển triển khai và quản lý các ứng dụng mà không cần phải tìm hiểu nhiều về Kubernetes và không cần toàn quyền truy cập vào hệ thống Kubernetes.
+## 1. Giới thiệu Argo CD - Công cụ GitOps cho Kubernetes
+
+**[Argo CD](https://argo-cd.readthedocs.io/en/stable/)** là công cụ **GitOps** giúp tự động triển khai và đồng bộ ứng dụng trên **Kubernetes** theo trạng thái khai báo trong Git.
 
 [![Hình](images/argocd-ui.webp)](https://argo-cd.readthedocs.io/en/stable)
+
+Chức năng chính:
+
+✅ **Triển khai từ Git** (YAML, Helm, Kustomize...)  
+✅ **Đồng bộ trạng thái** (tự động hoặc thủ công)  
+✅ **Quản lý nhiều cluster** Kubernetes  
+✅ **Giao diện Web UI & CLI** trực quan  
+✅ **RBAC & SSO** (quản lý quyền truy cập)  
+✅ **Tích hợp CI/CD** (Jenkins, GitHub Actions...)  
+✅ **Hỗ trợ Canary & [Blue-Green Deployment](https://viblo.asia/p/blue-green-deployment-tren-kubernetes-obA46P2xLKv)**  
+✅ **Giám sát & cảnh báo lỗi** (Prometheus, Grafana)  
+
+!!! tip "Tóm lại"
+    Argo CD giúp quản lý Kubernetes **dễ dàng, tự động và an toàn** theo mô hình **GitOps**. 🚀
+
+
+
 
 
 ## 2. Cài đặt Argocd
