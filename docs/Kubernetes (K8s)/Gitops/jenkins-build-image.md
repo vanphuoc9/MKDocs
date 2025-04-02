@@ -112,7 +112,7 @@ Cấu hình các tham số sau:
 ### 2.3. Cấu hình secret cho kaniko
 
 
-```json linenums="1"
+```json linenums="1" title="config.json" 
 {
     "auths": {
       "https://index.docker.io/v1/": {
