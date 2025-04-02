@@ -221,3 +221,7 @@ This may also be found at:
 *************************************************************
 *************************************************************
 ```
+
+## 4. Tài liệu tham khảo
+
+- [Installing Jenkins Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/)

@@ -1,6 +1,6 @@
 # Cài đặt Metallb + Ingress Nginx
 
-## Giới thiệu [Metallb](https://metallb.universe.tf/concepts/) + [Ingress nginx](Cài đặt ingress.md)
+## 1. Giới thiệu [Metallb](https://metallb.universe.tf/concepts/) + [Ingress nginx](Cài đặt ingress.md)
 
 MetalLB giúp Kubernetes triển khai dịch vụ LoadBalancer mà không cần nền tảng đám mây, bằng cách cấp phát địa chỉ và công bố địa chỉ ra bên ngoài.
 
@@ -33,7 +33,7 @@ Dưới đây là sơ đồ hệ thống sẽ triển khai
 
 ![Ingress](images/sodometa.png)
 
-## Cài đặt Metallb
+## 2. Cài đặt Metallb
 
 Nếu bạn đang sử dụng kube-proxy ở chế độ IPVS, kể từ Kubernetes v1.14.2, bạn phải bật chế độ ARP nghiêm ngặt (strict ARP mode).
 
@@ -157,7 +157,7 @@ phuoctv@master:~$
 
 Như vậy chúng ta có thể thấy service/ingress-nginx-controller loại LoadBalancer đã được deploy thành công và External IP là 192.168.1.50
 
-Tài liệu tham khảo
+## 3. Tài liệu tham khảo
 
 - [Cài đặt Metallb và Ingress Nginx trên Bare metal Kubernetes cluster của anh nvtienanh](https://nvtienanh.info/blog/cai-dat-metallb-va-ingress-nginx-tren-bare-metal-kubernetes-cluster)
 - [Installation Metallb](https://metallb.universe.tf/installation/)

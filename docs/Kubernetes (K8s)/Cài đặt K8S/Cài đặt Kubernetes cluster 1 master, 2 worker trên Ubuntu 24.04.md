@@ -1,10 +1,10 @@
 # Cài đặt Kubernetes cluster 1 master, 2 worker trên Ubuntu 24.04
 
-## Giới thiệu
+## 1. Giới thiệu
 
 Có nhiều cách để cài đặt k8s, trong tài liệu này giới thiệu cài đặt thủ công k8s trên ubuntu 24.04 để gần với môi trường production nhất
 
-## Yêu cầu hệ thống
+## 2. Yêu cầu hệ thống
 
 Trong môi trường thử nghiệm:
 
@@ -23,9 +23,9 @@ Lưu ý trên đây chỉ là mô hình thử nghiệm, còn môi trường prod
 | worker2.xtl  | ubuntu 24.04             | 192.168.1.102            | worker 2  |
 | nfs.xtl  | ubuntu 24.04             | 192.168.1.110            | NFS  |
 
-## Tiến hành cài đặt
+## 3. Tiến hành cài đặt
 
-### Cài đặt IP cho server nếu chưa cấu hình
+### 3.1. Cài đặt IP cho server nếu chưa cấu hình
 
 Đầu tiên kiểm tra IP hiện tại và cổng mạng của máy tính bằng lệnh
 ```bash 
@@ -49,7 +49,7 @@ sudo netplan apply
 Tham khảo:
 [Dùng virtualbox cài các máy ảo, dùng Bridged Adapter để cài ip tĩnh](https://thuanbui.me/static-ip-address-ubuntu-20-04/)
 
-### Cập nhật hệ điều hành và cập nhật hosts
+### 3.2. Cập nhật hệ điều hành và cập nhật hosts
 Sau khi cài đặt hệ điều hành, cần cập nhật hệ thống:
 ```bash 
 sudo apt update
@@ -91,7 +91,7 @@ Sau đó thêm vào bên dưới file nội dung dưới đây:
 192.168.1.110   nfs.xtl
 ```
 
-###Disable swap và cập nhật kernel
+### 3.3. Disable swap và cập nhật kernel
 
 Các lệnh dưới đây thực hiện trên tất cả các node
 ```bash
@@ -127,7 +127,7 @@ sudo mount -a
 free -h
 ```
 
-### Load the following kernel modules on all the nodes:
+### 3.4. Load the following kernel modules on all the nodes:
 
 ```bash
 sudo tee /etc/modules-load.d/containerd.conf <<EOF
@@ -142,7 +142,7 @@ sudo modprobe br_netfilter
 
 ```
 
-### Set the following Kernel parameters for Kubernetes.
+### 3.5. Set the following Kernel parameters for Kubernetes.
 
 ```bash
 sudo tee /etc/sysctl.d/kubernetes.conf <<EOF
@@ -158,7 +158,7 @@ Sau đó reload lại sysctl
 sudo sysctl --system
 ```
 
-### Cài đặt containerd run time
+### 3.6. Cài đặt containerd run time
 
 Chạy các lệnh dưới đây trên tất cả các node
 
@@ -170,7 +170,7 @@ sudo apt update
 sudo apt install -y containerd.io
 ```
 
-### Thêm cấu hình containerd.
+### 3.7. Thêm cấu hình containerd.
 
 ```bash
 containerd config default | sudo tee /etc/containerd/config.toml >/dev/null 2>&1
@@ -179,7 +179,7 @@ sudo systemctl restart containerd
 sudo systemctl enable containerd
 ```
 
-### Cài đặt Kubernetes
+### 3.8. Cài đặt Kubernetes
 
 Chạy các lệnh dưới đây trên tất cả các node
 
@@ -211,7 +211,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 ```
 
-### Khởi tạo cluster bằng kubeadm
+### 3.9. Khởi tạo cluster bằng kubeadm
 Chỉ chạy lênh dưới đây trên master node
 ```bash
 sudo kubeadm init \
@@ -231,7 +231,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 ```
 
-### Chúng ta thử chạy lệnh để kiếm tra trạng thái của cluster
+### 3.10. Chúng ta thử chạy lệnh để kiếm tra trạng thái của cluster
 ```bash
 kubectl cluster-info
 kubectl get nodes
@@ -241,7 +241,7 @@ kubectl get nodes
 
 Chúng ta thấy là control plane đang chạy và hiện tại chỉ có mỗi master node, chúng ta sẽ tiến hành thêm worker node vào cluster này.
 
-### Thêm worker node vào cluster
+### 3.11. Thêm worker node vào cluster
 
 Lưu ý: Chạy trên master, lấy mã kết nối worker vào master
 ```bash
@@ -267,7 +267,7 @@ worker2.xtl   NotReady   <none>          6s     v1.30.5
 ```
 cho thấy là các node đã được thêm thành công vào cluster.
 
-### Cài đặt Calico Pod Network cho Kubernetes cluster
+### 3.12. Cài đặt Calico Pod Network cho Kubernetes cluster
 
 Lưu ý: Các lệnh dưới đây chỉ chạy trên master node
 
@@ -317,7 +317,7 @@ coredns-787d4945fb-rs9mj
 
 ```
 
-### Kiểm tra trạng thái của các node, sau khi cài thành công
+### 3.13. Kiểm tra trạng thái của các node, sau khi cài thành công
 Nếu status là Running có nghĩa đã deploy thành công, bây giờ nếu kiểm tra trạng thái của các node thì status sẽ là Ready
 
 ```bash
@@ -330,7 +330,7 @@ worker2.xtl   Ready    <none>          19m   v1.30.5
 
 ```
 
-### Tài liệu tham khảo
+## 4. Tài liệu tham khảo
 
 - [Cài đặt Kubernetes cluster trên Ubuntu server 22.04](https://nvtienanh.info/blog/cai-dat-kubernetes-cluster-tren-ubuntu-server-22-04)
 - [Installing kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
