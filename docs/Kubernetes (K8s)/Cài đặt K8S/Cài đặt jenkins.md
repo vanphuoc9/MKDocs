@@ -184,7 +184,7 @@ Và lưu với quyền admin
 ## 3. Mở khóa Jenkins
 Khi lần đầu vào jenkins, bạn sẽ bị yêu cầu mở khóa jenkins
 
-![Ingress](images/jenkins01.jpg)
+![jenkins01](images/jenkins01.jpg)
 
 
 Lấy mật khẩu như sau:

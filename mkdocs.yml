@@ -11,6 +11,7 @@ nav:
       - Cài đặt Metallb + Ingress Nginx: Kubernetes (K8s)/Cài đặt K8S/Cài đặt Metallb.md
       - Cài đặt ArgoCD: Kubernetes (K8s)/Cài đặt K8S/Cài đặt argocd.md
       - Cài đặt Jenkins: Kubernetes (K8s)/Cài đặt K8S/Cài đặt jenkins.md
+      - GitOps với Jenkins + Argocd + Github + Docker hub: Kubernetes (K8s)/Cài đặt K8S/Gitops.md
   - Liên hệ: Liên hệ/index.md
   - Blog: 
       - blog/index.md
