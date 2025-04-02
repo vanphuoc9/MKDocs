@@ -9,6 +9,7 @@ nav:
       - Cài đặt NFS server: Kubernetes (K8s)/Cài đặt K8S/Cài đặt nfs.md
       - Cài đặt Ingress Nginx: Kubernetes (K8s)/Cài đặt K8S/Cài đặt ingress.md
       - Cài đặt Metallb + Ingress Nginx: Kubernetes (K8s)/Cài đặt K8S/Cài đặt Metallb.md
+      - Cài đặt ArgoCD: Kubernetes (K8s)/Cài đặt K8S/Cài đặt argocd.md
   - Liên hệ: Liên hệ/index.md
   - Blog: 
       - blog/index.md
