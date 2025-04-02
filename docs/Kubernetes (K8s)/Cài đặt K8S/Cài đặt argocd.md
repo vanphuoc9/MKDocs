@@ -96,7 +96,7 @@ spec:
               number: 80
 ```
 
-## 8. Trỏ host đến argocd.reb.com ở máy truy cập
+## 8. Trỏ host đến domain của Argocd ở máy truy cập
 
 Nếu sử dụng window thì có thể vào C:\Windows\System32\drivers\etc\hosts thêm dòng:
 
