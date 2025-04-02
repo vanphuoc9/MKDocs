@@ -190,7 +190,7 @@ Khi lần đầu vào jenkins, bạn sẽ bị yêu cầu mở khóa jenkins
 Lấy mật khẩu như sau:
 
 ```bash 
-kubectl logs $(kubectl get pods --selector=app=jenkins -o jsonpath="{.items[0].metadata.name}") | grep "Please use the following password"
+kubectl logs -n devops-tools -l app=jenkins | grep "Please use the following password"
 
 ```
 
