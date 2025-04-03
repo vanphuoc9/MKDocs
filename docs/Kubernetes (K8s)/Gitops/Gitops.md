@@ -22,9 +22,18 @@ GitOps là một phương pháp triển khai và quản lý hạ tầng, ứng d
 - **Vai trò**: ArgoCD đồng bộ hóa trạng thái ứng dụng trong Kubernetes với cấu hình trong Git.
 
 ## 3. Quy trình GitOps
-1. **Lưu trữ mã nguồn và cấu hình trên GitHub**.
-2. **Jenkins** xây dựng ứng dụng và đẩy Image Docker lên **Docker Hub**.
-3. **ArgoCD** tự động triển khai và đồng bộ ứng dụng trên Kubernetes từ GitHub.
+
+
+-   Source code của dự án được lưu ở một repo riêng, gọi là source repo
+-   Phần cấu hình triển khai ứng dụng (helmchart hay k8s manifest files..) được lưu ở một repo riêng, gọi là config repo
+-   Luồng CICD hoạt động theo trình tự:
+    -   Dev commit source code
+    -   Jenkins build source code
+    -   Jenkins Build Images
+    -   Jenkins push image lên image registry
+    -   Jenkins cập nhật thông tin phiên bản ứng dụng vào các file cấu hình triển khai ứng dụng lưu trên config repo
+    -   ArgoCD phát hiện thay đổi trên config repo thì cập nhật thay đổi về
+    -   ArgoCD so sánh thông tin cấu hình mới với cấu hình hiện tại trên hệ thống, nếu phát hiện sai khác sẽ cảnh báo và đồng bộ lại theo cấu hình được khai báo và lưu trên config repo
 
 
 !!! tip "Chú ý"
