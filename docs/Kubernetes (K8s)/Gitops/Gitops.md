@@ -39,4 +39,5 @@ GitOps là một phương pháp triển khai và quản lý hạ tầng, ứng d
 !!! tip "Chú ý"
     Có thể thay [GitHub](https://github.com/) bằng [Gitlab](https://docs.gitlab.com/user/get_started/) và Docker Hub bằng [Harbor registry private](https://goharbor.io/) hoặc [Gitlab registry](https://docs.gitlab.com/user/packages/container_registry/) để sử dụng registry riêng (private).
 
-![gitops](images/gitops.webp)
+
+![gitops](images/quytrinh.png)

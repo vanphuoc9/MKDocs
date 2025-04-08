@@ -139,7 +139,7 @@ kubectl -n devops-tools create secret generic kaniko-secret --from-file=config.j
 
 ### 2.4. Tích hợp vào Jenkin pipeline
 
-Mã nguồn github: https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline.git
+Mã nguồn github: [https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline.git](https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline.git)
 
 
 

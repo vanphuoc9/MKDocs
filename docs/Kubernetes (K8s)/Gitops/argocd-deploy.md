@@ -4,6 +4,11 @@
 
 Trong bài viết trước Jenkins đã lấy source từ github sau đó dùng kaniko để build Dockerfile có trong source, sau đó đẩy image lên docker hub, bài viết này mình sẽ giới thiệu luồng kế tiếp argocd dùng image của trên docker hub để deployment ứng dụng lên k8s
 
+Config repo: là nơi chứa cấu hình để deployment ứng dụng lên k8s
+
+Config repo source trong ví dụ: [https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline-config](https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline-config)
+
+
 ## 2. Dùng helm để deployment ứng dụng lên k8s bằng argocd
 
 ### 2.1. Tạo dự án helm
@@ -144,3 +149,104 @@ tolerations: []
 affinity: {}
 
 ```
+
+### 2.2. Tạo access key để truy cập github
+
+Vào thông tin user ở góc trên bên phải chọn Setting ⇒ Developer settings (Hoặc truy cập thẳng vào link: [https://github.com/settings/tokens](https://github.com/settings/tokens))
+
+Chọn Generate new token ⇒ Generate new token (classic) ⇒ Đặt tên token và tick chọn vào mục repo ⇒ Generate token ⇒ Lưu lại token vừa sinh ra để sử dụng
+
+### 2.3. Khai báo repository chứa config repo vào argocd
+
+Từ web của argocd vào Settings → Repositories → Connect repo → via HTTPS và cấu hình các tham số như sau:
+
+- Choose your connection method: => VIA HTTPS
+- Type => Git
+- Project => default
+- Repository URL: Điền thông tin repo đã tạo ở bên trên  [https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline-config](https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline-config)
+- Username/Password: Điền thông tin account, password là token tạo bên trên.
+
+![gitops](images/argocd1.png)
+
+### 2.4. Khai báo ứng dụng trên ArgoCD
+
+Khai báo application: Từ web của argocd vào Applications → New App và điền các tham số như sau:
+
+GENERAL:
+
+- Application Name: Điền tên của Application, ví dụ test-api
+- Project Name: Default
+- SYNC POLICY: Manual. Ở đây có 2 option là Manual hoặc Auto-sync
+
+
+!!! tip "Chú ý"
+    - Auto-sync: Khi phát hiện sự bất đồng bộ giữa cấu hình thực tế (trên K8S) so với định nghĩa (trên config repo thì Argo thực hiện tự động việc cập nhật cấu hình các resource trên K8S theo đúng cấu hình đã định nghĩa
+    - Manual Khi phát hiện bất động bộ thì ArgoCD sẽ chỉ cảnh báo lên các resource bị mất đồng bộ (out of sync) và bạn muốn đồng bộ lại thì cần phải chọn vào nút sync để đồng bộ lại.
+
+SOURCE:
+
+- Repository URL: [https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline-config](https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline-config)
+- Path: . -> Đây là thư mục chứa helmchart của chúng ta
+
+DESTINATION:
+
+- Cluster URL: https://kubernetes.default.svc
+- Namespace: test-api
+
+!!! tip "Chú ý"
+
+    Namespace: test-api cần tạo trước
+
+Helm:
+
+VALUES FILES: chọn values.yaml
+
+![gitops](images/argocd2.png)
+
+
+
+Có thể chạy argocd-test-config.yaml bên dưới thay vì cấu hình bằng giao diện ở trên
+
+```yaml title="argocd-test-config.yaml"  linenums="1"
+project: default
+source:
+  repoURL: https://github.com/vanphuoc9/complete-prodcution-e2e-pipeline-config.git
+  path: .
+  targetRevision: HEAD
+  helm:
+    valueFiles:
+      - values.yaml
+destination:
+  server: https://kubernetes.default.svc
+  namespace: test-api
+```
+
+```bash 
+kubectl apply -f argocd-test-config.yaml
+  
+```
+
+Chúng ta có thể ấn SYNC để đồng bộ trạng thái trên k8s với trên git
+
+![gitops](images/argocd3.png)
+
+Kết quả sau khi sync thành công, ứng dụng ở trạng thái "Synced":
+
+![gitops](images/argocd4.png)
+
+### 2.5. Trỏ host đến domain của App test ở máy truy cập
+
+Nếu sử dụng window thì có thể vào C:\Windows\System32\drivers\etc\hosts thêm dòng:
+
+```bash 
+192.168.1.50 test123.reb.com
+  
+```
+
+### 2.6. Test gọi đường dẫn test123.reb.com sẽ thấy trang web test hiện lên như sau
+
+![gitops](images/argocd5.png)
+
+## 3. Tài liệu tham khảo
+
+- [Xây dựng luồng Gitops với Jenkins và ArgoCD](https://viblo.asia/p/k8s-phan-21-xay-dung-luong-gitops-voi-jenkins-va-argocd-y3RL1aX7Lao#_tao-access-key-de-truy-cap-github-15)
