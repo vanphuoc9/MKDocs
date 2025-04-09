@@ -87,7 +87,7 @@ ingress:
   enabled: true
   className: ""
   annotations: {}
-    # kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: test.reb.com
@@ -219,6 +219,8 @@ source:
 destination:
   server: https://kubernetes.default.svc
   namespace: test-api
+syncPolicy:
+  automated: {}
 ```
 
 ```bash 
@@ -245,7 +247,7 @@ Nếu sử dụng window thì có thể vào C:\Windows\System32\drivers\etc\hos
 
 ### 2.6. Test gọi đường dẫn test123.reb.com sẽ thấy trang web test hiện lên như sau
 
-![gitops](images/argocd5.png)
+![gitops](images/argocd6.png)
 
 ## 3. Tài liệu tham khảo
 

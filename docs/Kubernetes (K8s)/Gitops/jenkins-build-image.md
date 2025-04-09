@@ -168,7 +168,7 @@ Các bước đơn giản:
 - Chạy pipeline với cấu hình được thiết lập trong Jenkinsfile
 
 
-```pipeline linenums="1"
+```pipeline title="Jenkinsfile-k8s-test" linenums="1"
 pipeline {
     agent any
     options {
