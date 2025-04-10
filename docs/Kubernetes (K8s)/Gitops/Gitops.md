@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # GitOps: Jenkins + Argocd + Github + Docker hub
 
 ## 1. Giới thiệu

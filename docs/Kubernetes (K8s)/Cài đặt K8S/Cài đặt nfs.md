@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Cài đặt NFS server
 
 ## 1. Cài đặt NFS Server

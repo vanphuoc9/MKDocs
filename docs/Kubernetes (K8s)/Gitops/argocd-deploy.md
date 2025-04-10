@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Cấu hình luồng Argocd deploy lên k8s
 
 ## 1. Giới thiệu

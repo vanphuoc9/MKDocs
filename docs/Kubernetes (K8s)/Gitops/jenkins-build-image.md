@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Cấu hình luồng Jenkins Build Docker image và push lên Docker Hub
 
 ## 1. Giới thiệu

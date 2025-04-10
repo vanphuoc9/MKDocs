@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Cài đặt Argocd
 
 ## 1. Giới thiệu Argo CD - Công cụ GitOps cho Kubernetes

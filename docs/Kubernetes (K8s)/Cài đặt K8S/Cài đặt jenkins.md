@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Cài đặt Jenkins trên K8S
 
 ## 1. Giới thiệu

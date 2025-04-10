@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Cài đặt Kubernetes cluster 1 master, 2 worker trên Ubuntu 24.04
 
 ## 1. Giới thiệu

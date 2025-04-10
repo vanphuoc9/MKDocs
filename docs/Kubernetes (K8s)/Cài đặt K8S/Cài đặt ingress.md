@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Cài đặt Ingress Nginx
 
 ## 1. Giới thiệu Ingress Nginx

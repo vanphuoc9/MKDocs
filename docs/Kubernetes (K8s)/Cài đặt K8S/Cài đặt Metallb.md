@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Cài đặt Metallb + Ingress Nginx
 
 ## 1. Giới thiệu [Metallb](https://metallb.universe.tf/concepts/) + [Ingress nginx](Cài đặt ingress.md)
