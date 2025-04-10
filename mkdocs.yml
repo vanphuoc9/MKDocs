@@ -26,6 +26,7 @@ theme:
     view: material/eye
   language: vi
   name: material
+  custom_dir: overrides
   palette:
     # Light Mode
     - scheme: default

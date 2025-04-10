@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Toàn luồng Jenkins + Argocd + Github + Docker hub trên k8s
 
 ## 1. Giới thiệu
