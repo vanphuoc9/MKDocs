@@ -35,6 +35,10 @@ Trong dự án này mình sẽ dùng redis để thực hiện caching dữ li�
 
 ## 3. Cài đặt thủ công trên k8s
 
+
+
+Github chứa file cài đặt: [https://github.com/vanphuoc9/install-redis-k8s.git](https://github.com/vanphuoc9/install-redis-k8s.git)
+
 ### 3.1. Tạo PV và PVC 
 
 
