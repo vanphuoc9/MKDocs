@@ -20,8 +20,11 @@ nav:
         - Cấu hình toàn luồng Jenkins + Argocd + Github + Docker hub trên k8s: Kubernetes (K8s)/Gitops/full-jenkins-argocd.md
   - Dự án phim: 
     - 1. Giới thiêu: project/movie/GioiThieu.md
-    - 2. Cài đặt Keycloack: project/movie/keycloack.md
-    - 3. Cài đặt Redis: project/movie/redis.md
+
+    - 2. Cài đặt môi trường DEV: 
+      - 2.1. Cài đặt Keycloack: project/movie/keycloack.md
+      - 2.2. Cài đặt Redis: project/movie/redis.md
+      - 2.3. Cài đặt MongoDB: project/movie/mongodb.md
   - Liên hệ: Liên hệ/index.md
   - Blog: 
       - blog/index.md
