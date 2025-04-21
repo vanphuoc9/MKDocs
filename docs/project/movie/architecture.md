@@ -43,7 +43,7 @@ Dưới đây là các dịch vụ trong hệ thống:
 | **AuthService**      | Xử lý xác thực và ủy quyền người dùng, quản lý session, JWT. Sử dụng keycloack.  |  |
 | **UserService**      | Quản lý thông tin người dùng như đăng ký, đăng nhập, chỉnh sửa hồ sơ. |  |
 | **MovieService**     | Cung cấp thông tin phim như tên, mô tả, thể loại, trailer, v.v.  | [https://github.com/vanphuoc9/movie.git](https://github.com/vanphuoc9/movie.git) |
-| **FileService**     | Cung cấp thông tin phim như tên, mô tả, thể loại, trailer, v.v.  | [https://github.com/vanphuoc9/file.git](https://github.com/vanphuoc9/file.git) |
+| **FileService**     | Cung cấp dịch vụ download file, upload file, delete file...  | [https://github.com/vanphuoc9/file.git](https://github.com/vanphuoc9/file.git) |
 | **ReviewService**    | Quản lý đánh giá và bình luận của người dùng về các bộ phim.    |  |
 | **RatingService**    | Quản lý hệ thống đánh giá (stars, like/dislike) của các bộ phim. |  |
 | **PaymentService**   | Xử lý giao dịch thanh toán cho thuê hoặc mua phim.             |  |

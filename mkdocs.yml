@@ -25,6 +25,7 @@ nav:
       - 3.1. Cài đặt Keycloack: project/movie/keycloack.md
       - 3.2. Cài đặt Redis: project/movie/redis.md
       - 3.3. Cài đặt MongoDB: project/movie/mongodb.md
+      - 3.4. Cài đặt MinIO: project/movie/minio.md
    
   - Liên hệ: Liên hệ/index.md
   - Blog: 
