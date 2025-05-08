@@ -25,7 +25,7 @@ Trong môi trường test cấu hình *, còn môi trường production nên rà
 
 ## 2. Cấu hình angluar 
 
-Sử dụng thư viện keycloak-angular (https://github.com/mauriciovigolo/keycloak-angular.git)[https://github.com/mauriciovigolo/keycloak-angular.git] để đăng nhập SSO thông qua keycloack
+Sử dụng thư viện keycloak-angular [https://github.com/mauriciovigolo/keycloak-angular.git](https://github.com/mauriciovigolo/keycloak-angular.git) để đăng nhập SSO thông qua keycloack
 
 
 Thêm cấu hình môi trường
