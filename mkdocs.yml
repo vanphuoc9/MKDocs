@@ -26,6 +26,7 @@ nav:
       - 3.2. Cài đặt Redis: project/movie/redis.md
       - 3.3. Cài đặt MongoDB: project/movie/mongodb.md
       - 3.4. Cài đặt MinIO: project/movie/minio.md
+      - 3.5. Triển khai service file lên k8s: project/movie/file.md
     - 4. Chức năng: 
       - 4.1. Chức năng đăng nhập SSO: project/movie/DangNhapVoiKeycloack.md
    
