@@ -4,7 +4,7 @@ comments: true
 # Triển khai service file lên k8s
 ## 1. Giới thiệu
 
-Bài viết này giới thiệu cách triển trai thử nghiệm api service file lên k8s.
+Bài viết này giới thiệu cách triển khai thử nghiệm api service file lên k8s.
 
 - Source code: [https://github.com/vanphuoc9/file.git](https://github.com/vanphuoc9/file.git) 
 - Source file config: [https://github.com/vanphuoc9/file-config.git](https://github.com/vanphuoc9/file-config.git)
