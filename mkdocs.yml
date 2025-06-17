@@ -29,7 +29,8 @@ nav:
       - 3.5. Triển khai service file lên k8s: project/movie/file.md
     - 4. Chức năng: 
       - 4.1. Chức năng đăng nhập SSO: project/movie/DangNhapVoiKeycloack.md
-   
+  - Oracle: 
+    - Cài đặt Oracle 21c trên Oracle Linux 7: Oracle/ol7-21c.md
   - Liên hệ: Liên hệ/index.md
   - Blog: 
       - blog/index.md
